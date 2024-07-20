@@ -2,6 +2,16 @@
 
 My CV in the ConTeXt format.
 
+* Dependencies
+
+- A ConTeXt distribution such as TeX Live. On macOS can be installed from Homebrew using ~brew install --cask mactex~.
+
+* Build
+
+```
+context CV.tex
+```
+
 * Credits
 
 - I used [[https://github.com/BruXy/resume/tree/master?tab=readme-ov-file][BruXy's template]].
