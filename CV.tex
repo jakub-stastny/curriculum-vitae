@@ -5,11 +5,18 @@
 \setupbodyfont[10.8pt]  %
 \setuppapersize[letter, portrait] % A3, A4, A5, A6; landscape
 
-% Debuging
-%\showframe % ukaze nastaveni vzhledu stranky
-%\showgrid
+% Debugging
+%% \showgrid
+%% \showframe
+%% \visualizeparagraphs
+%% \visualizespace
+%% \showstruts
 
 \setupbodyfontenvironment[default][em=italic]
+
+\setupwhitespace[medium] % Spacing after each paragraph.
+%% \setupinterlinespace[line=2.8ex]
+%% \setupitemize[before={\blank[2em]}, after={\blank[1em]}]
 
 \setupcolors[state=start]
 \setupcolor[rgb]
@@ -21,31 +28,31 @@
 %%% Section design %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \define[2]\CVSection{
-    \framedtext[
-%        width=\overlaywidth,
-%        width=\textwidth,
-        framecolor=darktitle,
-        color=darktitle,
-        width=\makeupwidth,
-%        height=6\bodyfontsize,
-        offset=2pt,
-%        leftframe=on,
-        bottomframe=on,
-%        background={SectionDeco},
-        align=flushleft, % flushright
-        frame=off,
-        strut=no,
-    ]{#2}
+  \framedtext[
+    %% width=\overlaywidth,
+    %% width=\textwidth,
+    framecolor=darktitle,
+    color=darktitle,
+    width=\makeupwidth,
+    %% height=6\bodyfontsize,
+    offset=2pt,
+    %% leftframe=on,
+    bottomframe=on,
+    %% background={SectionDeco},
+    align=flushleft, % flushright
+    frame=off,
+    strut=no,
+  ]{#2}
 }
 
 \setuphead[section][
-    command=\CVSection,
-    margin=-4pt,
-    rightmargin=10pt,
-%    color=darkgreen,
-    style={\switchtobodyfont[14pt]\bf},
-    before={\vskip 1mm},
-%    after=\nowhitespace,
+  command=\CVSection,
+  margin=-4pt,
+  rightmargin=10pt,
+  %% color=darkgreen,
+  style={\switchtobodyfont[14pt]\bf},
+  before={\vskip 1mm},
+  %% after=\nowhitespace,
 ]
 
 \setupitemize[each][joinedup][leftmargin=0em]
@@ -102,8 +109,11 @@ Eager to leverage my refreshed perspective and new skills to contribute to a for
 \section{Highlights of Qualifications}
 
 \startitemize[joinedup,columns,two]
-  \item Clojure, ClojureScript, Babashka & Cherry.
+  \item Clojure, ClojureScript & Babashka.
+  \item DigitalOcean & AWS.
   \item JavaScript & React.js.
+  \item Linux, ZSH/Bash, Vim & Emacs.
+  \item Containerization using Docker.
 \stopitemize
 
 %\vskip -15mm
@@ -111,46 +121,39 @@ Eager to leverage my refreshed perspective and new skills to contribute to a for
 \section{Professional Experience}
 
 \define[3]\Position{
-    \setupframed[height=1cm,frame=off]
-    \startcombination[2]
-        {\framed[width=14.5cm,top=\vss,bottom=\vss,align=right]{%
-        {\bfa #1}\\
-        {\sc #2}
-        }}{}
-        {\framed[width=5cm,align=flushright,top=\vss,bottom=\vss]{%
-        {\bf #3}
-        }}{}
-    \stopcombination
+  \setupframed[height=1cm,frame=off,offset=0pt]
+  \startcombination[2]
+    {\framed[width=14.5cm,top=\vss,bottom=\vss,align=right]{%
+    {\bfa #1}\\
+    {\sc #2}
+    }}{}
+    {\framed[width=5cm,align=flushright,top=\vss,bottom=\vss]{%
+    {\bf #3}
+    }}{}
+  \stopcombination
 }
 
-\Position{Root.cz}
-    {Technical redactor}
-    {07/2021~-- 2007}
+\Position{Root.cz}{Technical redactor}{07/2021~-- 2007}
 \startitemize
   \item Read.
 \stopitemize
 
-\Position{TopTal -- Remote}
-    {Senior dev}
-    {07/2021~-- present}
-\startitemize
-  \item Read.
-\stopitemize
+\Position{TopTal -- Remote}{Senior dev}{07/2021~-- July 2021}
+Some text.
 
-\Position{Sabatical}{lonely soldier}{March 2021 -- July 2024}
-\startitemize
+\Position{Sabatical}{}{March 2021 -- July 2024}
+\vskip -5mm
+\startitemize[before={}, after={}]
   \item Took a break due to burnout and the desire to move away from work in agencies and early-stage startups.
   \item Delved deeply into stress management, meditation, and breathwork.
   \item Gained an in-depth understanding of how these techniques can be used to manage and retain the flow state.
   \item Learned how to use stress management techniques as a safeguard against burnout.
-  \item Studied Traditional Chinese Medicine (TCM) and Ayurveda to improve diet and overall health.
+  \item Studied Traditional Chinese Medicine and Ayurveda to improve diet and overall health.
   \item The free time allowed me to discover and learn Clojure, which reignited my passion for software development.
-  \item Camino de Santiago de Compostela.
+  \item Camino de Santiago de Compostela from France all the way to the Atlatic ocean in Galicia, Spain.
 \stopitemize
 
-\blank
-
-\section{Personal Projects}
+\blank \section{Personal Projects}
 
 \useURL[linuxguru][https://gnulinux.guru]
 \Position{Rango}{\from[linuxguru]}{2014 -- present}
@@ -159,21 +162,12 @@ Eager to leverage my refreshed perspective and new skills to contribute to a for
   \item A
 \stopitemize
 
-\blank
-
-\Position{Blogger}{\from[homepage]}{2000~-- Present}
-
-\startitemize
-  \item Technical articles on my areas of interest including: programming, Linux,
-  ham radio and Meteosat reception.
-\stopitemize
-
 \section{Education}
 \startitemize
-    \item {\bf X}\hfill{10/2002 -- 06/2008}
-    \startitemize
-      \item A
-    \stopitemize
+  \item {\bf X}\hfill{10/2002 -- 06/2008}
+  \startitemize
+    \item A
+  \stopitemize
 \stopitemize
 
 \stoptext
