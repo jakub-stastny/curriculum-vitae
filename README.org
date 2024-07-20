@@ -1,0 +1,7 @@
+* About
+
+My CV in the ConTeXt format.
+
+* Credits
+
+- I used [[https://github.com/BruXy/resume/tree/master?tab=readme-ov-file][BruXy's template]].
