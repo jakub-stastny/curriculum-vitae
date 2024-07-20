@@ -1,0 +1,179 @@
+\mainlanguage[en]
+\language[en]
+\enableregime[utf]
+\pdfvariable minorversion 4 % verze pdf
+\setupbodyfont[10.8pt]  %
+\setuppapersize[letter, portrait] % A3, A4, A5, A6; landscape
+
+% Debuging
+%\showframe % ukaze nastaveni vzhledu stranky
+%\showgrid
+
+\setupbodyfontenvironment[default][em=italic]
+
+\setupcolors[state=start]
+\setupcolor[rgb]
+
+% The RGB values need to be converted from the 0-255 range to the 0-1 range by dividing each component by 255.
+% This is for 218:246:250 for instance :[r=0.8549,g=0.9647,b=0.9804].
+\definecolor[darktitle][r=0.0784,g=0.0549,b=0.4824]
+
+%%% Section design %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\define[2]\CVSection{
+    \framedtext[
+%        width=\overlaywidth,
+%        width=\textwidth,
+        framecolor=darktitle,
+        color=darktitle,
+        width=\makeupwidth,
+%        height=6\bodyfontsize,
+        offset=2pt,
+%        leftframe=on,
+        bottomframe=on,
+%        background={SectionDeco},
+        align=flushleft, % flushright
+        frame=off,
+        strut=no,
+    ]{#2}
+}
+
+\setuphead[section][
+    command=\CVSection,
+    margin=-4pt,
+    rightmargin=10pt,
+%    color=darkgreen,
+    style={\switchtobodyfont[14pt]\bf},
+    before={\vskip 1mm},
+%    after=\nowhitespace,
+]
+
+\setupitemize[each][joinedup][leftmargin=0em]
+
+%A4 210 x 297 mm
+%letter 215.9 x 279.4
+
+\setuplayout
+    [width=200mm,
+    height=268mm,
+    backspace=8mm,
+    topspace=5mm,
+    top=0mm,
+    header=5mm,
+    footer=8mm,
+    bottom=3mm,
+    margin=20mm,
+    rightedgedistance=15mm,
+    rightedge=70mm]
+
+\setuppagenumbering[location=]
+\setupfootertexts[{\sc Page \currentpage{} of \lastpage}]
+
+% For \url:
+
+\setupurl
+   [color=black,
+    style=\tt]
+
+% For \goto and \from:
+
+\setupinteraction
+   [state=start,
+    color=black,
+    style=\tt]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% http://canadian-resume-service.com/catagories/resume-samples/
+
+\starttext
+
+\input header.tex % TITLE
+\blank[1em]
+
+\section{Professional Summary}
+
+Seasoned software developer with over 15 years of experience in Ruby, JavaScript, and early adoption of frameworks like Angular.js and React.js. Recently transitioned to Clojure, drawn by its stable ecosystem and smart community. Proven ability to deliver reliable, high-quality software solutions.
+
+After a sabbatical to recover from burnout and refocus my career goals, I delved deeply into stress management, meditation, and breathwork. This period of self-improvement provided me with an in-depth understanding of how to manage and retain the flow state, safeguarding against burnout. I also studied Traditional Chinese Medicine (TCM) and Ayurveda to improve my diet and overall health. During this time, I discovered Clojure, which reignited my passion for software development.
+
+Eager to leverage my refreshed perspective and new skills to contribute to a forward-thinking company like LoanPro, where I can make a meaningful impact.
+
+\section{Highlights of Qualifications}
+
+\startitemize[joinedup,columns,two]
+  \item Clojure, ClojureScript, Babashka & Cherry.
+  \item JavaScript & React.js.
+\stopitemize
+
+%\vskip -15mm
+
+\section{Professional Experience}
+
+\define[3]\Position{
+    \setupframed[height=1cm,frame=off]
+    \startcombination[2]
+        {\framed[width=14.5cm,top=\vss,bottom=\vss,align=right]{%
+        {\bfa #1}\\
+        {\sc #2}
+        }}{}
+        {\framed[width=5cm,align=flushright,top=\vss,bottom=\vss]{%
+        {\bf #3}
+        }}{}
+    \stopcombination
+}
+
+\Position{Root.cz}
+    {Technical redactor}
+    {07/2021~-- 2007}
+\startitemize
+  \item Read.
+\stopitemize
+
+\Position{TopTal -- Remote}
+    {Senior dev}
+    {07/2021~-- present}
+\startitemize
+  \item Read.
+\stopitemize
+
+\Position{Sabatical}{lonely soldier}{March 2021 -- July 2024}
+\startitemize
+  \item Took a break due to burnout and the desire to move away from work in agencies and early-stage startups.
+  \item Delved deeply into stress management, meditation, and breathwork.
+  \item Gained an in-depth understanding of how these techniques can be used to manage and retain the flow state.
+  \item Learned how to use stress management techniques as a safeguard against burnout.
+  \item Studied Traditional Chinese Medicine (TCM) and Ayurveda to improve diet and overall health.
+  \item The free time allowed me to discover and learn Clojure, which reignited my passion for software development.
+  \item Camino de Santiago de Compostela.
+\stopitemize
+
+\blank
+
+\section{Personal Projects}
+
+\useURL[linuxguru][https://gnulinux.guru]
+\Position{Rango}{\from[linuxguru]}{2014 -- present}
+
+\startitemize
+  \item A
+\stopitemize
+
+\blank
+
+\Position{Blogger}{\from[homepage]}{2000~-- Present}
+
+\startitemize
+  \item Technical articles on my areas of interest including: programming, Linux,
+  ham radio and Meteosat reception.
+\stopitemize
+
+\section{Education}
+\startitemize
+    \item {\bf X}\hfill{10/2002 -- 06/2008}
+    \startitemize
+      \item A
+    \stopitemize
+\stopitemize
+
+\stoptext
