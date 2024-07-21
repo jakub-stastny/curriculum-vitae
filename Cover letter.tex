@@ -1,0 +1,44 @@
+\mainlanguage[en]
+\language[en]
+\enableregime[utf]
+\pdfvariable minorversion 4 % verze pdf
+\setupbodyfont[10.8pt]  %
+\setuppapersize[letter, portrait] % A3, A4, A5, A6; landscape
+
+\setupbodyfont[modern,12pt]
+\setuplayout
+  [topspace=1cm,
+   backspace=1.5cm,
+   cutspace=1.5cm,
+   header=0cm,
+   footer=1cm]
+
+\starttext
+
+\input resources.tex
+
+\startalignment[middle]
+  {\bf\ss\tfd Jakub Šťastný} \par
+  \myaddress\par
+  \from[mail] \par
+  \date
+\stopalignment
+
+\vfill
+
+\startalignment[flushleft]
+Hiring Manager \par
+LoanPro \par
+[Company Address] \par
+[City, State, Zip Code] \par
+\stopalignment
+
+\vskip 1cm
+
+%% \input cover-letter-body.tex
+
+Sincerely,
+
+Jakub Šťastný
+
+\stoptext
