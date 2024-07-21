@@ -26,7 +26,8 @@
 \definecolor[darktitle][r=0.0784,g=0.0549,b=0.4824]
 
 %% All footnotes at the end.
-\setupnotation[footnote][location=text,way=bysection]
+\definenote[endnote][way=bytext]
+\setupnotation[endnote][location=text]
 
 %%% Section design %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -81,131 +82,18 @@
 
 % For \url:
 
-\setupurl[color=black,style=\tt]
+\setupurl[color=darktitle] %,style=\tt
 
 % For \goto and \from:
 \setupinteraction[state=start,color=darktitle] % ,style=\tt
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% http://canadian-resume-service.com/catagories/resume-samples/
-
 \starttext
 
-\input header.tex % TITLE
+\input header.tex
 \blank[1em]
-
-\section{Professional Summary}
-
-Seasoned software developer with over 15 years of experience in Ruby, JavaScript, and early adoption of frameworks like Angular.js and React.js. Recently transitioned to Clojure, drawn by its stable ecosystem and smart community. Proven ability to deliver reliable, high-quality software solutions.
-
-After a sabbatical to recover from burnout and refocus my career goals, I delved deeply into stress management, meditation, and breathwork. This period of self-improvement provided me with an in-depth understanding of how to manage and retain the flow state, safeguarding against burnout. I also studied Traditional Chinese Medicine (TCM) and Ayurveda to improve my diet and overall health. During this time, I discovered Clojure, which reignited my passion for software development.
-
-Eager to leverage my refreshed perspective and new skills to contribute to a forward-thinking company like LoanPro, where I can make a meaningful impact.
-
-\section{Highlights of Qualifications}
-
-\startitemize[joinedup,columns,two]
-  \item Clojure, ClojureScript & Babashka.
-  \item DigitalOcean & AWS.
-  \item JavaScript & React.js.
-  \item Linux, ZSH/Bash, Vim & Emacs.
-  \item Containerization using Docker.
-\stopitemize
-
-%\vskip -15mm
-
-\section{Professional Experience}
-
-\define[3]\Position{
-  \blank
-  \setupframed[height=1cm,frame=off,offset=0pt]
-  \startcombination[2]
-    {\framed[width=14.5cm,top=\vss,bottom=\vss,align=right]{%
-    {\bfa #1}\\
-    {\sc #2}
-    }}{}
-    {\framed[width=5cm,align=flushright,top=\vss,bottom=\vss]{%
-    {\bf #3}
-    }}{}
-  \stopcombination
-}
-
-%% I was 18 when I started working there.
-\useURL[root-profile][https://www.root.cz/autori/jakub-stastny]
-\Position{Root.cz}{Technical redactor}{December 2006~-- August 2008}
-\startitemize
-  \item Worked as a technical redactor on the second largest Linux site in the Czech Republic at the time.
-  \item Wrote news items and in-depth articles daily, contributing to the site's growth and relevance.
-  \item Developed comprehensive knowledge of Linux ecosystems and community dynamics.
-  \item Regularly participated in Linux conferences and meetups, expanding professional network.
-  \item Contributed to the growth of Linux awareness and adoption in the Czech Republic.
-  \item {\bf My articles:} \from[root-profile].
-\stopitemize
-
-%% I was 20 yo when I moved to London.
-\useURL[jgp][https://www.jobsgopublic.com]
-\Position{JobsGoPublic.co.uk}{Junior Ruby & JavaScript developer}{May 2009~--XXX 2010}
-\startitemize
-\stopitemize
-
-\useURL[dachis-acquisition][https://www.venturecapitaljournal.com/dachis-group-buys-headshift]
-\Position{Headshift Ltd}{Junior Ruby & JavaScript developer}{May 2009~--XXX 2010}
-{\em Headshift Ltd was \color[blue]{\goto{acquired by the Dachis group}[url(https://www.venturecapitaljournal.com/dachis-group-buys-headshift)]}.}
-{\em Headshift Ltd was acquired by the Dachis group\footnote{
-\from[dachis-acquisition]
-}.}
-
-This rocks\footnote{and sucks at the same time}.
-
-\startitemize
-\stopitemize
-
-\Position{VMware, RabbitMQ team}{Independent Ruby contractor}{07/2021~-- July 2021}
-{\em RabbitMQ is now part of SpringSource.}
-
-\startitemize
-\stopitemize
-
-\Position{TopTal -- Remote}{Senior Ruby & JavaScript developer}{07/2021~-- July 2021}
-\startitemize
-\stopitemize
-
-\Position{Sabatical}{}{March 2021 -- July 2024}
-\vskip -5mm
-\startitemize[before={}, after={}]
-  \item Took a break due to burnout and the desire to move away from work in agencies and early-stage startups.
-  \item Delved deeply into stress management, meditation, and breathwork.
-  \item Gained an in-depth understanding of how these techniques can be used to manage and retain the flow state.
-  \item Learned how to use stress management techniques as a safeguard against burnout.
-  \item Studied Traditional Chinese Medicine and Ayurveda to improve diet and overall health.
-  \item The free time allowed me to discover and learn Clojure, which reignited my passion for software development.
-  \item Camino de Santiago de Compostela from France all the way to the Atlatic ocean in Galicia, Spain.
-\stopitemize
-
-\blank \section{Personal Projects}
-
-\useURL[linuxguru][https://gnulinux.guru]
-\Position{Rango}{\from[linuxguru]}{2014 -- present}
-DPM
-
-\startitemize
-  \item A
-\stopitemize
-
-\section{Education}
-\startitemize
-  \item {\bf Gymnázium Prachatice}\hfill{September 2000 -- June 2007}
-  \startitemize
-    \item Prestige grammar school with an eight-year program.
-    \item I ranked second in the entrance examination.
-    \item Since I was working from my penultimate year and IT was my passion, I eventually dropped out.
-  \stopitemize
-\stopitemize
-
-\page[yes] % Forces a new page for the footnotes
-
-\section{Footnotes}
-\placenotes[endnote][criterium=all] % Places all footnotes here
+\input body.tex
 
 \stoptext
+
+%% And remember this is the opposite of the spiritual and is needed for
+%% balance (aka: grounding). It’s up to you to make it suit so you can enjoy it.
