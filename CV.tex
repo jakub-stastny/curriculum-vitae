@@ -25,6 +25,9 @@
 % This is for 218:246:250 for instance :[r=0.8549,g=0.9647,b=0.9804].
 \definecolor[darktitle][r=0.0784,g=0.0549,b=0.4824]
 
+%% All footnotes at the end.
+\setupnotation[footnote][location=text,way=bysection]
+
 %%% Section design %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \define[2]\CVSection{
@@ -78,16 +81,10 @@
 
 % For \url:
 
-\setupurl
-   [color=black,
-    style=\tt]
+\setupurl[color=black,style=\tt]
 
 % For \goto and \from:
-
-\setupinteraction
-   [state=start,
-    color=black,
-    style=\tt]
+\setupinteraction[state=start,color=darktitle] % ,style=\tt
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -121,6 +118,7 @@ Eager to leverage my refreshed perspective and new skills to contribute to a for
 \section{Professional Experience}
 
 \define[3]\Position{
+  \blank
   \setupframed[height=1cm,frame=off,offset=0pt]
   \startcombination[2]
     {\framed[width=14.5cm,top=\vss,bottom=\vss,align=right]{%
@@ -133,13 +131,45 @@ Eager to leverage my refreshed perspective and new skills to contribute to a for
   \stopcombination
 }
 
-\Position{Root.cz}{Technical redactor}{07/2021~-- 2007}
+%% I was 18 when I started working there.
+\useURL[root-profile][https://www.root.cz/autori/jakub-stastny]
+\Position{Root.cz}{Technical redactor}{December 2006~-- August 2008}
 \startitemize
-  \item Read.
+  \item Worked as a technical redactor on the second largest Linux site in the Czech Republic at the time.
+  \item Wrote news items and in-depth articles daily, contributing to the site's growth and relevance.
+  \item Developed comprehensive knowledge of Linux ecosystems and community dynamics.
+  \item Regularly participated in Linux conferences and meetups, expanding professional network.
+  \item Contributed to the growth of Linux awareness and adoption in the Czech Republic.
+  \item {\bf My articles:} \from[root-profile].
 \stopitemize
 
-\Position{TopTal -- Remote}{Senior dev}{07/2021~-- July 2021}
-Some text.
+%% I was 20 yo when I moved to London.
+\useURL[jgp][https://www.jobsgopublic.com]
+\Position{JobsGoPublic.co.uk}{Junior Ruby & JavaScript developer}{May 2009~--XXX 2010}
+\startitemize
+\stopitemize
+
+\useURL[dachis-acquisition][https://www.venturecapitaljournal.com/dachis-group-buys-headshift]
+\Position{Headshift Ltd}{Junior Ruby & JavaScript developer}{May 2009~--XXX 2010}
+{\em Headshift Ltd was \color[blue]{\goto{acquired by the Dachis group}[url(https://www.venturecapitaljournal.com/dachis-group-buys-headshift)]}.}
+{\em Headshift Ltd was acquired by the Dachis group\footnote{
+\from[dachis-acquisition]
+}.}
+
+This rocks\footnote{and sucks at the same time}.
+
+\startitemize
+\stopitemize
+
+\Position{VMware, RabbitMQ team}{Independent Ruby contractor}{07/2021~-- July 2021}
+{\em RabbitMQ is now part of SpringSource.}
+
+\startitemize
+\stopitemize
+
+\Position{TopTal -- Remote}{Senior Ruby & JavaScript developer}{07/2021~-- July 2021}
+\startitemize
+\stopitemize
 
 \Position{Sabatical}{}{March 2021 -- July 2024}
 \vskip -5mm
@@ -157,6 +187,7 @@ Some text.
 
 \useURL[linuxguru][https://gnulinux.guru]
 \Position{Rango}{\from[linuxguru]}{2014 -- present}
+DPM
 
 \startitemize
   \item A
@@ -164,10 +195,17 @@ Some text.
 
 \section{Education}
 \startitemize
-  \item {\bf X}\hfill{10/2002 -- 06/2008}
+  \item {\bf Gymnázium Prachatice}\hfill{September 2000 -- June 2007}
   \startitemize
-    \item A
+    \item Prestige grammar school with an eight-year program.
+    \item I ranked second in the entrance examination.
+    \item Since I was working from my penultimate year and IT was my passion, I eventually dropped out.
   \stopitemize
 \stopitemize
+
+\page[yes] % Forces a new page for the footnotes
+
+\section{Footnotes}
+\placenotes[endnote][criterium=all] % Places all footnotes here
 
 \stoptext
