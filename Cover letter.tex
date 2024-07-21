@@ -6,12 +6,19 @@
 \setuppapersize[letter, portrait] % A3, A4, A5, A6; landscape
 
 \setupbodyfont[modern,12pt]
+
 \setuplayout
   [topspace=1cm,
    backspace=1.5cm,
-   cutspace=1.5cm,
+   cutspace=0.5cm,  % Reduce the right margin
    header=0cm,
-   footer=1cm]
+   footer=0.5cm,   % Reduce the bottom margin
+   height=fit,
+   width=fit]
+
+%% Spacing.
+\setupinterlinespace[line=3.2ex]
+\setupwhitespace[medium]
 
 \starttext
 
@@ -35,7 +42,7 @@ LoanPro \par
 
 \vskip 1cm
 
-%% \input cover-letter-body.tex
+\input cover-letter-body.tex
 
 Sincerely,
 
