@@ -36,23 +36,15 @@
 
 \starttext
   \input shared.header.tex
-
   \blank[3em]
 
-  \setupnarrower[left=2cm,right=-0.5cm]
-
   %% Letter body.
-  \startnarrower[left,0em,right,1em]
-  %% \startalign[right]
+  \setupnarrower[left=2cm,right=-0.5cm]
+  \startnarrower[left,right]
     \doiffileelse{CoverLetter.body.tex}
     {\input CoverLetter.body.tex}
     {{\em Please create {\tt CoverLetter.body.tex} with the cover letter content.}}
 
-  %% \ContentFrame {
-    Sincerely,
-
-    Jakub Šťastný\par\date
-  %% }
-  %% \stopalign
+    Sincerely,\par Jakub Šťastný\par\date
   \stopnarrower
 \stoptext
