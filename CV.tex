@@ -66,17 +66,13 @@
 %letter 215.9 x 279.4
 
 \setuplayout
-    [width=200mm,
-    height=268mm,
-    backspace=8mm,
-    topspace=5mm,
-    top=0mm,
-    header=5mm,
-    footer=8mm,
-    bottom=3mm,
-    margin=20mm,
-    rightedgedistance=15mm,
-    rightedge=70mm]
+  [topspace=-0.4cm,
+   backspace=0cm,
+   cutspace=0.1cm,  % Reduce the right margin
+   header=0cm,
+   footer=0.5cm,   % Reduce the bottom margin
+   height=fit,
+   width=fit]
 
 \setuppagenumbering[location=]
 \setupfootertexts[{\sc Page \currentpage{} of \lastpage}]
@@ -90,7 +86,10 @@
 \starttext
   \input shared.header.tex
   \blank[1em]
-  \input CV.body.tex
+  \setupnarrower[left=2cm,right=-0.5cm]
+  \startnarrower[left,right]
+    \input CV.body.tex
+  \stopnarrower
 \stoptext
 
 %% Patricia: And remember this is the opposite of the spiritual and is needed for
