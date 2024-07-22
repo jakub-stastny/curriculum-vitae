@@ -20,32 +20,23 @@
 \setupinterlinespace[line=3.2ex]
 \setupwhitespace[medium]
 
+\definecolor[link][r=0.0784,g=0.0549,b=0.4824]
+
+% For \url:
+\setupurl[color=link] %,style=\tt
+
+% For \goto and \from:
+\setupinteraction[state=start,color=link] % ,style=\tt
+
 \starttext
+  \input header.tex
 
-\input resources.tex
+  \blank[3em]
 
-\startalignment[middle]
-  {\bf\ss\tfd Jakub Šťastný} \par
-  \myaddress\par
-  \from[mail] \par
-  \date
-\stopalignment
+  %% Letter body.
+  \input cover-letter-body.tex
 
-\vfill
+  Sincerely,
 
-\startalignment[flushleft]
-Hiring Manager \par
-LoanPro \par
-[Company Address] \par
-[City, State, Zip Code] \par
-\stopalignment
-
-\vskip 1cm
-
-\input cover-letter-body.tex
-
-Sincerely,
-
-Jakub Šťastný
-
+  Jakub Šťastný\par\date
 \stoptext
