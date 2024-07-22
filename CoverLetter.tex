@@ -6,13 +6,21 @@
 \setuppapersize[letter, portrait] % A3, A4, A5, A6; landscape
 
 \setuplayout
-  [topspace=1cm,
-   backspace=1.5cm,
+  [topspace=-0.4cm,
+   backspace=0cm,
    cutspace=0.1cm,  % Reduce the right margin
    header=0cm,
    footer=0.5cm,   % Reduce the bottom margin
    height=fit,
    width=fit]
+
+\defineframed[ContentFrame]
+  [frame=off,
+   width=\makeupwidth,
+   height=fit,
+   offset=none,
+   location=low,
+   margin=5em]
 
 %% Spacing.
 \setupinterlinespace[line=3.2ex]
@@ -31,12 +39,20 @@
 
   \blank[3em]
 
+  \setupnarrower[left=2cm,right=-0.5cm]
+
   %% Letter body.
-  \doiffileelse{CoverLetter.body.tex}
-  {\input CoverLetter.body.tex}
-  {{\em Please create {\tt CoverLetter.body.tex} with the cover letter content.}}
+  \startnarrower[left,0em,right,1em]
+  %% \startalign[right]
+    \doiffileelse{CoverLetter.body.tex}
+    {\input CoverLetter.body.tex}
+    {{\em Please create {\tt CoverLetter.body.tex} with the cover letter content.}}
 
-  Sincerely,
+  %% \ContentFrame {
+    Sincerely,
 
-  Jakub Šťastný\par\date
+    Jakub Šťastný\par\date
+  %% }
+  %% \stopalign
+  \stopnarrower
 \stoptext
