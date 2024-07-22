@@ -1,0 +1,51 @@
+\input shared.resources.tex
+
+\definecolor[name][r=0.3451,g=0.0941,b=0.2706]
+\definecolor[card][r=0.9137,g=0.9333,b=0.9451]
+
+% Define the header frame with zero margins and padding, and a background color
+\defineframed[HeaderFrame]
+  [frame=off,
+   width=\paperwidth,
+   height=3cm,
+   offset=none,
+   background=color,
+   backgroundcolor=gray,
+   top=0pt,
+   bottom=0pt,
+   left=0pt,
+   right=0pt]
+
+% Command to place an X at a specific location
+\define\cornerX{\red{\ss\tfd X}}
+
+% Use the HeaderFrame for the header
+\HeaderFrame{
+  \cornerX\hfill\cornerX\par
+  \vfill
+  \cornerX\hfill\cornerX
+}
+
+\startcombination[2]
+
+%% % Left pane with name & title.
+%% {\framed[width=10cm,top=\vss,bottom=\vss]{%
+%% {\switchtobodyfont[24pt]\bf
+%% \color[name]{Jakub Šťastný}}
+%% \blank[3mm]\hairline\blank[.25mm]
+%% {\tfa\sc Senior Clojure Fullstack Developer}
+%% }}{}
+
+%% % Right pane, card with links.
+%% {\framed[width=9.5cm,align=flushleft,
+%%   style=\tfx,top=\vss,bottom=\vss,background=color,backgroundcolor=card,
+%%   offset=5pt]{%
+%% {%\tfx
+%% {\bf Current address:} \dotfill{} \myaddress \\
+%% {\bf Email:} \dotfill{} {\tt \from[mail]} \\
+%% {\bf GitHub:} \dotfill{} \from[github] \\
+%% {\bf Former GitHub:} \dotfill{} \from[prev-github] \\
+%% {\bf Speak fluently:} \dotfill{} Czech, English, Spanish, Polish \\
+%% }}}{}
+
+\stopcombination

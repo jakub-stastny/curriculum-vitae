@@ -23,7 +23,8 @@
 
 % The RGB values need to be converted from the 0-255 range to the 0-1 range by dividing each component by 255.
 % This is for 218:246:250 for instance :[r=0.8549,g=0.9647,b=0.9804].
-\definecolor[darktitle][r=0.0784,g=0.0549,b=0.4824]
+\definecolor[title][r=0.0784,g=0.0549,b=0.4824]
+\definecolor[link][r=0.0784,g=0.0549,b=0.4824]
 
 %% All footnotes at the end.
 \definenote[endnote][way=bytext]
@@ -35,8 +36,8 @@
   \framedtext[
     %% width=\overlaywidth,
     %% width=\textwidth,
-    framecolor=darktitle,
-    color=darktitle,
+    framecolor=title,
+    color=title,
     width=\makeupwidth,
     %% height=6\bodyfontsize,
     offset=2pt,
@@ -81,10 +82,10 @@
 \setupfootertexts[{\sc Page \currentpage{} of \lastpage}]
 
 % For \url:
-\setupurl[color=darktitle] %,style=\tt
+\setupurl[color=link] %,style=\tt
 
 % For \goto and \from:
-\setupinteraction[state=start,color=darktitle] % ,style=\tt
+\setupinteraction[state=start,color=link] % ,style=\tt
 
 \starttext
   \input header.tex

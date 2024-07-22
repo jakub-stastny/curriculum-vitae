@@ -27,14 +27,14 @@
 \setupinteraction[state=start,color=link] % ,style=\tt
 
 \starttext
-  \input header.tex
+  \input shared.header.tex
 
   \blank[3em]
 
   %% Letter body.
-  \doiffileelse{cover-letter-body.tex}
-  {\input cover-letter-body.tex}
-  {{\em Please create {\tt cover-letter-body.tex} with the cover letter content.}}
+  \doiffileelse{CoverLetter.body.tex}
+  {\input CoverLetter.body.tex}
+  {{\em Please create {\tt CoverLetter.body.tex} with the cover letter content.}}
 
   Sincerely,
 
