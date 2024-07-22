@@ -74,14 +74,22 @@
    height=fit,
    width=fit]
 
-\setuppagenumbering[location=]
-\setupfootertexts[{\sc Page \currentpage{} of \lastpage}]
+%% \setuppagenumbering[location=]
+\setuppagenumbering[state=stop]
+%% \setupfootertexts[{\sc Page \currentpage{} of \lastpage}]
 
 % For \url:
 \setupurl[color=link] %,style=\tt
 
-% For \goto and \from:
-\setupinteraction[state=start,color=link] % ,style=\tt
+%% Inspect with pdfinfo command from the poppler package.
+\setupinteraction
+  [state=start,
+   title={Résumé of Jakub Šťastný},
+   subtitle={Senior Clojure Fullstack Developer},
+   author={Jakub Šťastný},
+   keyword={Clojure, ClojureScript, JavaScript, React.js}, %% FIXME: This is one single keyword
+   color=link, % Optional: Set color for links with \goto and \from.
+   openaction={firstpage, Fit}] % Optional: Set the opening view
 
 \starttext
   \input shared.header.tex
