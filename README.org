@@ -8,9 +8,9 @@ My CV in the ConTeXt format.
 
 * Build
 
-```
-context CV.tex
-```
+#+begin_src sh
+  context CV.tex
+#+end_src
 
 * Credits
 
