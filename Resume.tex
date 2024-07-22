@@ -2,8 +2,11 @@
 \language[en]
 \enableregime[utf]
 \pdfvariable minorversion 4 % verze pdf
-\setupbodyfont[10.8pt]  %
+%% \setupbodyfont[10.8pt]  %
 \setuppapersize[letter, portrait] % A3, A4, A5, A6; landscape
+
+\definefontfamily[mainface][rm][DejaVu Serif]
+\setupbodyfont[mainface,10.8pt]
 
 % Debugging
 %% \showgrid
@@ -96,7 +99,7 @@
   \blank[1em]
   \setupnarrower[left=2cm,right=-0.5cm]
   \startnarrower[left,right]
-    \input CV.body.tex
+    \input Resume.body.tex
   \stopnarrower
 \stoptext
 
