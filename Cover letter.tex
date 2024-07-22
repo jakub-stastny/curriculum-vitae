@@ -5,12 +5,10 @@
 \setupbodyfont[10.8pt]  %
 \setuppapersize[letter, portrait] % A3, A4, A5, A6; landscape
 
-\setupbodyfont[modern,12pt]
-
 \setuplayout
   [topspace=1cm,
    backspace=1.5cm,
-   cutspace=0.5cm,  % Reduce the right margin
+   cutspace=0.1cm,  % Reduce the right margin
    header=0cm,
    footer=0.5cm,   % Reduce the bottom margin
    height=fit,
@@ -34,7 +32,9 @@
   \blank[3em]
 
   %% Letter body.
-  \input cover-letter-body.tex
+  \doiffileelse{cover-letter-body.tex}
+  {\input cover-letter-body.tex}
+  {{\em Please create {\tt cover-letter-body.tex} with the cover letter content.}}
 
   Sincerely,
 
