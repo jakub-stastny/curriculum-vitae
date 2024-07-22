@@ -16,15 +16,41 @@
    left=0pt,
    right=0pt]
 
+% Define styles for left and right columns
+\defineframed[leftcol]
+  [frame=off,
+   width=0.5\paperwidth,
+   align=left]
+
+\defineframed[rightcol]
+  [frame=off,
+   width=0.5\paperwidth,
+   align=right]
+
 % Command to place an X at a specific location
 \define\cornerX{\red{\ss\tfd X}}
 
-% Use the HeaderFrame for the header
+%% \HeaderFrame{
+%%   \cornerX\hfill\cornerX\par
+%%   \vfill
+%%   \cornerX\hfill\cornerX
+%% }
+
 \HeaderFrame{
-  \cornerX\hfill\cornerX\par
-  \vfill
-  \cornerX\hfill\cornerX
+  \leftcol{
+    {\switchtobodyfont[24pt]\bf\color[name]{Jakub Šťastný}}
+    \blank[3mm]\hairline\blank[.25mm]
+    {\tfa\sc Senior Clojure Fullstack Developer}
+  }%
+  \rightcol{
+    {\bf Current address:} \dotfill{} \myaddress \\
+    {\bf Email:} \dotfill{} {\tt \from[mail]} \\
+    {\bf GitHub:} \dotfill{} \from[github] \\
+    {\bf Former GitHub:} \dotfill{} \from[prev-github] \\
+    {\bf Speak fluently:} \dotfill{} Czech, English, Spanish, Polish \\
+  }
 }
+
 
 \startcombination[2]
 
