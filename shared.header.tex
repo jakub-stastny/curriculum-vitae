@@ -9,8 +9,8 @@
    width=\paperwidth,
    height=3cm,
    offset=none,
-   background=color,
-   backgroundcolor=gray,
+   %% background=color,
+   %% backgroundcolor=gray,
    top=0pt,
    bottom=0pt,
    left=0pt,
@@ -30,36 +30,40 @@
 % Command to place an X at a specific location
 \define\cornerX{\red{\ss\tfd X}}
 
-%% \HeaderFrame{
-%%   \cornerX\hfill\cornerX\par
-%%   \vfill
-%%   \cornerX\hfill\cornerX
-%% }
-
 \HeaderFrame{
-  \leftcol{
-    {\switchtobodyfont[24pt]\bf\color[name]{Jakub Šťastný}}
-    \blank[3mm]\hairline\blank[.25mm]
-    {\tfa\sc Senior Clojure Fullstack Developer}
-  }
+  %% DEBUG: show red cross in each corner.
+  %% \cornerX\hfill\cornerX\par
+  %% \vfill
+  %% \cornerX\hfill\cornerX
 
-  \rightcol{
-    {\bf Current address:} \dotfill{} \myaddress \\
-    {\bf Email:} \dotfill{} {\tt \from[mail]} \\
-    {\bf GitHub:} \dotfill{} \from[github] \\
-    {\bf Former GitHub:} \dotfill{} \from[prev-github] \\
-    %% {\bf Speak fluently:} \dotfill{} Czech, English, Spanish, Polish \\
-  }
+    \startcombination[2*1]
+      {\leftcol{
+        {\switchtobodyfont[24pt]\bf\color[name]{Jakub Šťastný}}
+        \blank[3mm]\hairline\blank[.25mm]
+        {\tfa\sc Clojure Fullstack Developer}
+      }}{}
+      {\rightcol{
+        {\framed[width=9.5cm,align=flushleft,frame=off,
+          style=\tfx,top=\vss,bottom=\vss,background=color,backgroundcolor=card,
+          offset=5pt]{%
+        {%\tfx
+        {\bf Current address:} \dotfill{} \myaddress \\
+        {\bf Email:} \dotfill{} {\tt \from[mail]} \\
+        {\bf GitHub:} \dotfill{} \from[github] \\
+        {\bf Former GitHub:} \dotfill{} \from[prev-github] \\
+        }}}{}
+      }}{}
+    \stopcombination
 }
 
-\startcombination[2]
+%% \startcombination[2]
 
 %% % Left pane with name & title.
 %% {\framed[width=10cm,top=\vss,bottom=\vss]{%
 %% {\switchtobodyfont[24pt]\bf
 %% \color[name]{Jakub Šťastný}}
 %% \blank[3mm]\hairline\blank[.25mm]
-%% {\tfa\sc Senior Clojure Fullstack Developer}
+%% {\tfa\sc Clojure Fullstack Developer}
 %% }}{}
 
 %% % Right pane, card with links.
@@ -71,7 +75,6 @@
 %% {\bf Email:} \dotfill{} {\tt \from[mail]} \\
 %% {\bf GitHub:} \dotfill{} \from[github] \\
 %% {\bf Former GitHub:} \dotfill{} \from[prev-github] \\
-%% {\bf Speak fluently:} \dotfill{} Czech, English, Spanish, Polish \\
 %% }}}{}
 
-\stopcombination
+%% \stopcombination

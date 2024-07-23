@@ -9,7 +9,7 @@ My CV in the ConTeXt format.
 * Build
 
 #+begin_src sh
-  context CV.tex
+  context Resume.tex
 #+end_src
 
 * Credits
