@@ -1,6 +1,6 @@
 * About
 
-My CV in the ConTeXt format.
+My résumé in the ConTeXt format.
 
 * Dependencies
 
@@ -9,8 +9,18 @@ My CV in the ConTeXt format.
 * Build
 
 #+begin_src sh
+  # Build single file.
   context Resume.tex
+
+  # Run the whole build pipeline.
+  # The build fn is defined in .env/zsh.zsh.
+  build
 #+end_src
+
+* Research
+
+** Applying for job in 2020s
+The US companies use résumé, not CV, which is very English. Résumé is a one-page long brief and unlike CV doesn't contain the full professional experience. Résumés are fed into ATS systems which match them against the job description and determines whether the candidate's worth looking at at all.
 
 * Credits
 
