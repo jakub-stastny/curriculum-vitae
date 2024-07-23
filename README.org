@@ -20,7 +20,24 @@ My résumé in the ConTeXt format.
 * Research
 
 ** Applying for job in 2020s
-The US companies use résumé, not CV, which is very English. Résumé is a one-page long brief and unlike CV doesn't contain the full professional experience. Résumés are fed into ATS systems which match them against the job description and determines whether the candidate's worth looking at at all.
+US companies use résumé, not CV, which is very English. Résumé is a one-page long brief and unlike CV doesn't contain the full professional experience. Résumés are fed into ATS systems which match them against the job description and determines whether the candidate's worth looking at at all.
+
+Obviously this makes GitHub even more important as a source of reliable information about the person and LinkedIn acts as an online CV.
+
+*** Patricia's comment
+#+begin_quote
+  Most employers in tech automatically discount cvs that long without even reading them. In the US the expect a single page, in Europe they want or max two. Ask the AI. Nobody wants that level of detail. It’s a summary. Employment is a risk, look at cv and see if right skills mentioned, talk to contractor to see if they appear normal, perhaps ask a couple of questions to clarify or get more detail, hire and keep fingers crossed it works.
+
+  The more you give the more likely you are to be automatically excluded without your cv having been looked at. Also the more you give the more you box yourself in, less means more scope for a trader to interpret favorably.
+
+  Feed it into ai and get a short version. If you want longer version put a url link to it on the short version.
+
+  The chances of picking the right person for a job are less than 15% so it’s all a risk. The page just shows the skills in summary, the interviewer proves you are human and can communicate. Then you are started on trial and decision made fast. That’s how it works, especially in tech.
+
+  That’s why I suggested the hearings I did. Give the employer what they need not a big diatribe about you. That’s what a cv is.
+
+  Always his to have more detail somewhere in case it’s asked for but giving too much gives people reasons to rule you out. Giving less improves your chances. Nowadays it’s about a brief online profile and listing skills and languages and tools by name gets you part the computer scanning to a human.
+#+end_quote
 
 * Credits
 
