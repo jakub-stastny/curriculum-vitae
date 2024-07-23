@@ -94,6 +94,20 @@
    color=link, % Optional: Set color for links with \goto and \from.
    openaction={firstpage, Fit}] % Optional: Set the opening view
 
+\define[3]\Position{
+  \blank
+  \setupframed[height=1cm,frame=off,offset=0pt]
+  \startcombination[2]
+    {\framed[width=12.5cm,top=\vss,bottom=\vss,align=right]{%
+    {\bfa #1}\\
+    {\sc #2}
+    }}{}
+    {\framed[width=7cm,align=flushright,top=\vss,bottom=\vss]{%
+    {\bf #3}
+    }}{}
+  \stopcombination
+}
+
 \starttext
   \input shared.header.tex
   \blank[1em]
